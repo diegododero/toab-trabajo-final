@@ -45,11 +45,40 @@
 \end{titlepage}
 
 \section{Introducción}
+\paragraph{}
+Para poder comenzar a comprender el propósito y las características de los HMM, primero es necesario describir lo que una cadena de Markov representa.
+En un sentido amplio del concepto, podría decirse que la posibilidad de inferir la ocurrencia de un evento en función de otro conocido previamente ya existía al momento del postulado de Markov. No es otro que el teorema de Bayes; el mismo permite calcular la ocurrencia de un evento A en función de la de un evento B, los cuales a priori son independientes entre sí.
+
+\begin{align*}
+ P(A_i|B) = \frac{P(B|A_i) P(A_i)}{\sum_{k = 1}^{n} P(B|A_k)P(A_k}
+\end{align*}
+
+
+\paragraph{}
+Sin embargo, el aporte de Markov es aún mayor en términos predictivos, ya que las cadenas markovianas no sólo independizan el estado o el valor de una variable en un estado de tiempo con respecto al pasado de la misma, sino que permiten a continuación utilizar el estado que posee en el presente, como factor determinante en el estado futuro. Esto es ya que no sólo evalúa la probabilidad de ocurrencia de los eventos, sino que incluye la probabilidad de transicionar de un estado a otro (aun cuando los estados a priori son independientes entre sí).
+
+\paragraph{}
+Las Cadenas de Markov son una herramienta estadística que permite modelar procesos estocásticos para los cuales se conocen no sólo los distintos estados o valores posibles de las variables estudiadas, sino también la probabilidad de cada una de las posibles transiciones entre dichos estados.
+
+
 \section{Utilidades}
+\paragraph{}
+Las cadenas ocultas de Markov han sido y siguen siendo ampliamente utilizadas dentro del ámbito de los procesos de Machine Learning.
+Son modelos predictivos altamente eficaces y que además permiten alimentar modelos de inteligencia artificial los cuales aprenden de los valores arrojados por los mismos para la toma de decisiones.
+
+\paragraph{}
+En el ámbito de la biología y la genética pueden utilizarse para diversos estudios, tales como la predicción de la aparición de un Motif en una secuencia proteica de aminoácidos, o de la presencia de intrones o exones dentro de una secuencia de adn (Rabiner_Juang_hmms.pdf).
+
+\paragraph{}
+Existen trabajos donde se han utilizado HMM para modelar los estados de la membrana celular en relación al estado de los canales iónicos (que determinan el potencial de membrana de una celula). No solo para un tipo de canal en particular, sino aplicados a varios tipos de canales a la vez, y comparándolos entre si al mismo tiempo. Como lo demuestran Pullford, Chang y Gallant en “Evaluation and estimation of various Markov Models with applications to Membrane Channel Kinetics”.
+Por supuesto que para lograr esto el equipo de investigación ha debido modificar y adaptar los diferentes modelos según los datos observables en cada caso.
+
 \section{Descripción y ejemplos}
 \section{Aplicaciones en programación}
 \section{Anexos}
 \section{Bibliografía}
+\bibliographystyle{babplain}
+\bibliography{bibliografia}
 
 
 \end{document}
